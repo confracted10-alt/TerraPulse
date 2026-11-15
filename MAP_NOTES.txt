@@ -1,0 +1,13 @@
+MAP IMPLEMENTATION
+
+This rebuild uses Folium to generate the Leaflet map and Streamlit's HTML component to
+display it. It avoids the previous app's hand-written Leaflet bootloader and custom
+JavaScript event logic, which could leave the map blank when a CDN script failed.
+
+Basemaps:
+- OpenStreetMap
+- CARTO Positron
+- Esri World Imagery
+
+The basemap is selected in the Streamlit controls; the map's layer control also exposes
+available layers. Fire observations are rendered as clickable circle markers.
